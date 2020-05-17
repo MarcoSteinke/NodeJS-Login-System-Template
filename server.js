@@ -1,7 +1,14 @@
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
+const passport = require('passport')
+const flash = require('flash')
 
+const passportConfig = require('./passport-config')
+
+passportConfig(passport, username => {
+    fakeDatabase.find(user  => user.username === username);
+})
 
 fakeDatabase = [];
 
