@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 
+fakeDatabase = [];
+
+app.use(express.urlencoded({extended: false}))
+
 app.set('view-engine', 'ejs');
 
 app.listen(3000, () => {
