@@ -14,25 +14,30 @@ app.listen(3000, () => {
 });
 
 app.get('/', (req, res) => {
-    res.render('index.ejs', {name: "Marco"});
+    res.render('index.ejs');
 });
 
 app.get('/register', (req, res) => {
-    res.render('register.ejs', {name: "Marco"});
+    res.render('register.ejs');
 });
 
 app.get('/login', (req, res) => {
-    res.render('login.ejs', {name: "Marco"});
+    res.render('login.ejs');
 });
 
 app.post('/register', async (req, res) => {
     try {
-        const securePassword = bcrypt.hash(req.body.password, 10);
-        users.push({
+        const securePassword = await bcrypt.hash(req.body.password, 10);
+        fakeDatabase.push({
             id: Date.now().toString(),
-            name: req.body.name, 
-            password: securePassword});
-    } catch {
-        
+            name: req.body.username, 
+            password: securePassword
+        });
+        res.redirect('/login');
+    } catch (e) {
+        res.redirect('/register');
     }
+
+    console.log(fakeDatabase);
+
 });
