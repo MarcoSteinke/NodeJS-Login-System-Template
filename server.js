@@ -18,3 +18,7 @@ app.get('/register', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login.ejs', {name: "Marco"});
 });
+
+app.post('/register', (req, res) => {
+    
+});
