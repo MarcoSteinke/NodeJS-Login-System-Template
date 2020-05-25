@@ -1,0 +1,16 @@
+= 🅽🅾🅳🅴 🅹🆂 🅻🅾🅶🅸🅽 🆂🆈🆂🆃🅴🅼
+
+== Introduction
+In this repository you can find a template for the creation of `User Login Systems`.
+
+== Dependencies
+* Node JS
+* Nodemon
+* EJS
+* Nodemon
+* dotenv
+
+== Usage
+【1】 Clone the repository
+
+【2】 Navigate into the project-directory and run `npm run` to start the project
